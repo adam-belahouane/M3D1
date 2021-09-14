@@ -108,16 +108,16 @@ const falseIf3Or1 = function(array){
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */ 
 const longestStr = function(array){
-    let longestStr = array[0]
-    for(let i = 0;i<array.length;i++){
-        if(longestStr.length<= array[i].length){
-            return longestStr = array[i]
+    
+    for(let i = 0; i <array.length;i++){
+        if( array[0].length < array[i].length){
+             return array[i]
         }else{
-            return longestStr
+             return array[i-1]
         }
     }
 }
-console.log(longestStr(["hello", "hi", "adambel"]))
+console.log(longestStr(["hellosirsddd", "hi", "adambesssdfsfdsfsdfsl"]))
 /* 12. Create a function to find the types of a given angle:
   1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
     2. Right angle ⇒ 90 degree. Return `right`
@@ -126,8 +126,18 @@ console.log(longestStr(["hello", "hi", "adambel"]))
 
     Pass the angle as a parameter.
 */
-
-
+const angleName = function(param){
+    if(param > 0 && param < 90){
+        return "acute"
+    }else if(param == 90){
+        return "right"
+    }else if(param > 90 && param < 180){
+        return "obtuse"
+    }else if(param == 180){
+        return "straight"
+    }
+}
+console.log(angleName(180))
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
 
 
